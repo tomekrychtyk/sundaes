@@ -15,4 +15,23 @@ export const handlers = [
       ])
     );
   }),
+
+  rest.get('http://localhost:3030/toppings', (req, res, ctx) => {
+    return res(
+      ctx.json([
+        {
+          name: 'Hot fudge',
+          imagePath: '/images/hotFudge.jpg',
+        },
+        {
+          name: 'Gummi bears',
+          imagePath: '/images/gummiBears.jpg',
+        },
+        {
+          name: 'Mochi',
+          imagePath: '/images/mochi.jpg',
+        },
+      ])
+    );
+  }),
 ];
